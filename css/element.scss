@@ -1,0 +1,90 @@
+$font-family: "VT323", "Courier New", "Arial", Sans-serif;
+%font-basic {
+  font-family: $font-family;
+  color: #647cff;
+}
+
+%box {
+  border: 1px dotted rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.2)
+}
+
+.info-container {
+  @extend %box;
+  font-family: $font-family;
+  .info {
+    padding: 15px;
+    p {
+      margin-top: 15px;
+      font-size: large;
+      @extend %font-basic;
+    }
+  }
+}
+
+.clock-container {
+  @extend %box;
+  .time-stamp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      padding: 10px;
+      font-size: x-large;
+      @extend %font-basic;
+    }
+  }
+  .show-info {
+    display: flex;
+    justify-content: center;
+    p {
+      @extend %font-basic;
+      padding: 10px;
+      font-size: x-large;
+    }
+  }
+}
+
+.note-app {
+  @extend %box;
+  .note-display {
+    padding: 10px;
+    #note-time {
+      @extend %font-basic;
+      font-size: small;
+      margin-right: 5px;
+      opacity: 0.8;
+    }
+    #note-text {
+      @extend %font-basic;
+      font-size: large;
+      margin: 0px 5px;
+    }
+    #remove-btn {
+      @extend %font-basic;
+      background-color: rgba(0,0,0,0);
+      border: none;
+      margin: 0px 5px;
+    }
+    #imp-btn {
+      @extend %font-basic;
+      background-color: rgba(0,0,0,0);
+      border: none;
+      margin: 0px 5px;
+    }
+  }
+  .note-taker {
+    padding: 10px;
+    #note-input {
+      @extend %font-basic;
+      border: none;
+      background-color: rgba(0,0,0,0);
+    }
+    #note-btn {
+      @extend %font-basic;
+      border: none;
+      background-color: rgba(0,0,0,0);
+      margin: 0px 5px;
+    }
+  }
+}

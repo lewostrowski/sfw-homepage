@@ -1,0 +1,58 @@
+.info-container .info p, .clock-container .time-stamp p, .clock-container .show-info p, .note-app .note-display #note-time, .note-app .note-display #note-text, .note-app .note-display #remove-btn, .note-app .note-display #imp-btn, .note-app .note-taker #note-input, .note-app .note-taker #note-btn {
+  font-family: "VT323", "Courier New", "Arial", Sans-serif;
+  color: #647cff; }
+
+.info-container, .clock-container, .note-app {
+  border: 1px dotted rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2); }
+
+.info-container {
+  font-family: "VT323", "Courier New", "Arial", Sans-serif; }
+  .info-container .info {
+    padding: 15px; }
+    .info-container .info p {
+      margin-top: 15px;
+      font-size: large; }
+
+.clock-container .time-stamp {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .clock-container .time-stamp p {
+    padding: 10px;
+    font-size: x-large; }
+.clock-container .show-info {
+  display: flex;
+  justify-content: center; }
+  .clock-container .show-info p {
+    padding: 10px;
+    font-size: x-large; }
+
+.note-app .note-display {
+  padding: 10px; }
+  .note-app .note-display #note-time {
+    font-size: small;
+    margin-right: 5px;
+    opacity: 0.8; }
+  .note-app .note-display #note-text {
+    font-size: large;
+    margin: 0px 5px; }
+  .note-app .note-display #remove-btn {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    margin: 0px 5px; }
+  .note-app .note-display #imp-btn {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    margin: 0px 5px; }
+.note-app .note-taker {
+  padding: 10px; }
+  .note-app .note-taker #note-input {
+    border: none;
+    background-color: rgba(0, 0, 0, 0); }
+  .note-app .note-taker #note-btn {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0px 5px; }
+
+/*# sourceMappingURL=element.css.map */
