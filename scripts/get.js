@@ -126,6 +126,7 @@ const sunInfo = () => {
   req.open("GET", jsonLink)
   req.send()
   console.log("JSON get note controler. Action taken once at " + moment().format("HH:mm:ss"))
+  // dodać return, a potem ewaluacje czy jest potrzebne pobieranie plików
 }
 
 sunInfo()
