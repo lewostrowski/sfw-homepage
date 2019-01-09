@@ -18,7 +18,7 @@ const sunInfo = () => {
   req.addEventListener("readystatechange", (e) => {
     if (req.readyState === 4 && req.status === 200) {
       let data = JSON.parse(e.target.responseText)
-      console.log("Data taken and parsed") // controla message
+      console.log("Data taken and parsed") // control message
       data = data.results
 
       let newDiv = document.createElement("div")
@@ -125,6 +125,7 @@ const sunInfo = () => {
   })
   req.open("GET", jsonLink)
   req.send()
+  console.log("JSON get note controler. Action taken once.")
 }
 
 sunInfo()
