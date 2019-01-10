@@ -9,10 +9,23 @@ $font-family: "VT323", "Courier New", "Arial", Sans-serif;
   background: rgba(255,255,255,0.2)
 }
 
+#version {
+  font-family: $font-family;
+  color: white;
+  font-size: small;
+}
+
 .info-container {
   @extend %box;
   font-family: $font-family;
   .info {
+    padding: 15px;
+    p {
+      font-size: large;
+      @extend %font-basic;
+    }
+  }
+  .error-msg {
     padding: 15px;
     p {
       margin-top: 15px;

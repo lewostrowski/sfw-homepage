@@ -1,4 +1,4 @@
-.info-container .info p, .clock-container .time-stamp p, .clock-container .show-info p, .note-app .note-display #note-time, .note-app .note-display #note-text, .note-app .note-display #remove-btn, .note-app .note-display #imp-btn, .note-app .note-taker #note-input, .note-app .note-taker #note-btn {
+.info-container .info p, .info-container .error-msg p, .clock-container .time-stamp p, .clock-container .show-info p, .note-app .note-display #note-time, .note-app .note-display #note-text, .note-app .note-display #remove-btn, .note-app .note-display #imp-btn, .note-app .note-taker #note-input, .note-app .note-taker #note-btn {
   font-family: "VT323", "Courier New", "Arial", Sans-serif;
   color: #647cff; }
 
@@ -6,11 +6,20 @@
   border: 1px dotted rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.2); }
 
+#version {
+  font-family: "VT323", "Courier New", "Arial", Sans-serif;
+  color: white;
+  font-size: small; }
+
 .info-container {
   font-family: "VT323", "Courier New", "Arial", Sans-serif; }
   .info-container .info {
     padding: 15px; }
     .info-container .info p {
+      font-size: large; }
+  .info-container .error-msg {
+    padding: 15px; }
+    .info-container .error-msg p {
       margin-top: 15px;
       font-size: large; }
 
