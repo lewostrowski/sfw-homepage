@@ -1,10 +1,6 @@
 # sfw-homepage
 safe for work homepage
+v. 1.02 -stable
 
-Known issiu
-/ lack of stable version and test version
-/ issu after re-open browser from saved tab
-  *file oops.js ; if statment 114
-/ zombie code to delete
-  *file get.js ; if statment 85
-
+Known issue
+/ issue after re-open browser from saved tab files dont refresh automaticly
