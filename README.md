@@ -5,5 +5,5 @@ Known issiu
 / lack of stable version and test version
 / issu after re-open browser from saved tab
   *file oops.js ; if statment 114
-/ piece of code to delete
+/ zombie code to delete
   *file get.js ; if statment 85
