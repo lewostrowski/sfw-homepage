@@ -55,8 +55,8 @@ const dayDuration = function(x) {
 }
 
 let req = new XMLHttpRequest()
- const jsonLink = "scripts/j son.json" // for test puropse only
-//const jsonLink = "https://api.sunrise-sunset.org/json?lat=52.406341&lng=16.932882&formatted=0"
+// const jsonLink = "scripts/j son.json" // for test puropse only
+const jsonLink = "https://api.sunrise-sunset.org/json?lat=52.406341&lng=16.932882&formatted=0"
 
 const sunInfo = () => {
   req.addEventListener("readystatechange", (e) => {
