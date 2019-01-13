@@ -1,7 +1,8 @@
 $font-family: "VT323", "Courier New", "Arial", Sans-serif;
+$main-color: #0C0C0A;
 %font-basic {
   font-family: $font-family;
-  color: #647cff;
+  color: #0C0C0A;
 }
 
 %box {
@@ -17,13 +18,13 @@ $font-family: "VT323", "Courier New", "Arial", Sans-serif;
 
 #btn-style {
   padding: 5px;
-  border: dashed 1px #647cff;
+  border: dashed 1px $main-color;
   text-decoration: none;
   @extend %font-basic;
   background-color: rgba(0,0,0,0);
   transition-duration: 0.5s;
   &:hover {
-    border: solid 1px #647cff;
+    border: solid 1px $main-color;
     transition-duration: 0.5s;
   }
 }
@@ -121,12 +122,12 @@ $font-family: "VT323", "Courier New", "Arial", Sans-serif;
   a {
     margin: 5px;
     padding: 7px 15px;
-    border: dashed 1px #647cff;
+    border: dashed 1px $main-color;
     text-decoration: none;
     @extend %font-basic;
     transition-duration: 0.5s;
     &:hover {
-      border: solid 1px #647cff;
+      border: solid 1px $main-color;
       transition-duration: 0.5s;
     }
   }

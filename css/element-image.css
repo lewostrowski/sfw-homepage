@@ -1,6 +1,6 @@
 #btn-style, .info-container .info p, .info-container .error-msg p, .clock-container .time-stamp p, .clock-container .show-info p, .note-app .note-display #note-time, .note-app .note-display #note-text, .note-app .note-display #remove-btn, .note-app .note-display #imp-btn, .note-app .note-taker #note-input, .note-app .note-taker #note-btn, .btn-link a {
   font-family: "VT323", "Courier New", "Arial", Sans-serif;
-  color: #647cff; }
+  color: #0C0C0A; }
 
 .info-container, .clock-container, .note-app {
   border: 1px dotted rgba(255, 255, 255, 0.2);
@@ -13,12 +13,12 @@
 
 #btn-style {
   padding: 5px;
-  border: dashed 1px #647cff;
+  border: dashed 1px #0C0C0A;
   text-decoration: none;
   background-color: rgba(0, 0, 0, 0);
   transition-duration: 0.5s; }
   #btn-style:hover {
-    border: solid 1px #647cff;
+    border: solid 1px #0C0C0A;
     transition-duration: 0.5s; }
 
 .info-container {
@@ -79,11 +79,11 @@
   .btn-link a {
     margin: 5px;
     padding: 7px 15px;
-    border: dashed 1px #647cff;
+    border: dashed 1px #0C0C0A;
     text-decoration: none;
     transition-duration: 0.5s; }
     .btn-link a:hover {
-      border: solid 1px #647cff;
+      border: solid 1px #0C0C0A;
       transition-duration: 0.5s; }
 
-/*# sourceMappingURL=element.css.map */
+/*# sourceMappingURL=element-image.css.map */

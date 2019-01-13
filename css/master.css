@@ -8,7 +8,7 @@ html {
 .page-container {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 10vh 60vh 30vh; }
+  grid-template-rows: 5vh 50vh 40vh; }
 
 .inner-container {
   grid-column: 2/3;
@@ -37,5 +37,14 @@ html {
     grid-row: 1/2; }
   .clock-container .show-info {
     grid-row: 2/3; }
+
+.btn-container {
+  grid-row: 3/4;
+  grid-column: 2/3; }
+
+.btn-style {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start; }
 
 /*# sourceMappingURL=master.css.map */
