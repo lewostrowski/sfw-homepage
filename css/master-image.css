@@ -3,7 +3,7 @@
   padding: 0px; }
 
 html {
-  background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%); }
+  background-image: url("media/1545775691429.jpg"); }
 
 .page-container {
   display: grid;
@@ -55,4 +55,4 @@ html {
   justify-content: flex-end;
   align-items: flex-start; }
 
-/*# sourceMappingURL=master.css.map */
+/*# sourceMappingURL=master-image.css.map */

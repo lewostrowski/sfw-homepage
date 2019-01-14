@@ -10,7 +10,7 @@ html {
 .page-container {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 10vh 60vh 30vh;
+  grid-template-rows: 9vh 50vh 36vh;
 }
 
 .inner-container {
@@ -45,4 +45,24 @@ html {
   .show-info {
     grid-row:2/3;
   }
+}
+
+.ask-app {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.btn-container {
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+
+.btn-style {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
 }

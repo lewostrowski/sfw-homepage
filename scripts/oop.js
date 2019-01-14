@@ -55,15 +55,19 @@ const dayDuration = function(x) {
 }
 
 let req = new XMLHttpRequest()
-// const jsonLink = "scripts/j son.json" // for test puropse only
+//const jsonLink = "scripts/json.json" // for test puropse only
 const jsonLink = "https://api.sunrise-sunset.org/json?lat=52.406341&lng=16.932882&formatted=0"
+
+if (jsonLink === "scripts/json.json") {
+  console.log("Overall-devLOG: testing JSON is loaded. Data on the screen not be correct")
+}
 
 const sunInfo = () => {
   req.addEventListener("readystatechange", (e) => {
     if (req.readyState === 4 && req.status === 200) {
       let data = JSON.parse(e.target.responseText)
-      console.log("JSON file status: OK")
-      console.log("JSON parsing: OK") // control message
+      console.log("Overall-status-LOG: JSON file status: OK")
+      console.log("Overall-status-LOG: JSON parsing: OK") // control message
       data = data.results
 
       const nonStaticData = () => {
@@ -90,6 +94,7 @@ const sunInfo = () => {
         newDiv1.appendChild(status.make())
         newDiv1.appendChild(dayDur.make())
         newDiv1.appendChild(dayRem.make())
+        newDiv1.appendChild(civilRise.make())
         newDiv1.appendChild(sunrise.make())
         newDiv1.appendChild(sunset.make())
         newDiv1.appendChild(civilSet.make())
@@ -113,16 +118,32 @@ const sunInfo = () => {
         let newDiv3 = document.createElement("div")
         newDiv3.setAttribute("class", "show-info")
         if (moment(data.sunrise) > moment()) {
-          let showInfo = new ElementNew("showInfo", "Sun is close")
-          newDiv3.appendChild(showInfo.make())
+          if (moment().format("DD") % 2){
+            let showInfo = new ElementNew("showInfo", "Get up early, huh?")
+            newDiv3.appendChild(showInfo.make())
+          } else {
+            let showInfo = new ElementNew("showInfo", "Get up early, huh?")
+            newDiv3.appendChild(showInfo.make())
+          }
         } else if (moment(data.sunrise) < moment() && moment(data.sunset) > moment()) {
-          let showInfo = new ElementNew("showInfo", "Live is on")
-          newDiv3.appendChild(showInfo.make())
+          if (moment().format("DD") % 2){
+            let showInfo = new ElementNew("showInfo", "Today is workout day!")
+            newDiv3.appendChild(showInfo.make())
+          } else {
+            let showInfo = new ElementNew("showInfo", "Movin, movin, movin...!")
+            newDiv3.appendChild(showInfo.make())
+          }
         } else if (moment(data.sunset) < moment()) {
-          let showInfo = new ElementNew("showInfo", "Time to say goodnight")
-          newDiv3.appendChild(showInfo.make())
+
+          if (moment().format("DD") % 2 === 0){
+            let showInfo = new ElementNew("showInfo", "Workout done?")
+            newDiv3.appendChild(showInfo.make())
+          } else {
+            let showInfo = new ElementNew("showInfo", "Why not chilling?")
+            newDiv3.appendChild(showInfo.make())
+          }
         } else {
-          console.log("error")
+          console.log("Overall-status-LOG: something went wrong with under-clock message script")
         }
         document.querySelector(".clock-container").appendChild(newDiv3)
       }
@@ -153,7 +174,7 @@ const sunInfo = () => {
         let newDiv3 = document.createElement("div")
         newDiv3.setAttribute("class", "show-info")
         let showInfo = new ElementNew("showInfo", "Better check internet connection")
-        console.log("If internet connection is ok, check JSON file.")
+        console.log("Overall-status-LOG: If internet connection is ok, check JSON file.")
         newDiv3.appendChild(showInfo.make())
         document.querySelector(".clock-container").appendChild(newDiv3)
       }
@@ -164,7 +185,7 @@ const sunInfo = () => {
   })
   req.open("GET", jsonLink)
   req.send()
-  console.log("JSON note controler. Action taken once at " + moment().format("HH:mm:ss"))
+  console.log("Overall-status-LOG: JSON note controler. Action taken once at " + moment().format("HH:mm:ss"))
 }
 
 sunInfo()
