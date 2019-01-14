@@ -1,14 +1,17 @@
 * {
   margin: 0px;
-  padding: 0px; }
+  padding: 0px;
+}
 
 html {
-  background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%); }
+  background-image: url("media/1545775691429.jpg");
+}
 
 .page-container {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 9vh 50vh 36vh; }
+  grid-template-rows: 9vh 50vh 36vh;
+}
 
 .inner-container {
   grid-column: 2/3;
@@ -16,27 +19,33 @@ html {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 100px 300px; }
+  grid-template-rows: 100px 300px;
+}
 
 .note-app {
   grid-column: 2/3;
-  grid-row: 2/3; }
+  grid-row: 2/3;
+}
 
 .info-container {
   display: flex;
   flex-direction: column;
   grid-column: 1/2;
-  grid-row: 1/3; }
+  grid-row: 1/3;
+}
 
 .clock-container {
   grid-column: 2/3;
   grid-row: 1/2;
   display: grid;
-  grid-template-rows: 50px 50px; }
-  .clock-container .time-stamp {
-    grid-row: 1/2; }
-  .clock-container .show-info {
-    grid-row: 2/3; }
+  grid-template-rows: 50px 50px;
+  .time-stamp {
+    grid-row: 1/2;
+  }
+  .show-info {
+    grid-row:2/3;
+  }
+}
 
 .ask-app {
   grid-row: 1/2;
@@ -44,15 +53,16 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px; }
+  margin: 10px;
+}
 
 .btn-container {
   grid-row: 3/4;
-  grid-column: 2/3; }
+  grid-column: 2/3;
+}
 
 .btn-style {
   display: flex;
   justify-content: flex-end;
-  align-items: flex-start; }
-
-/*# sourceMappingURL=master.css.map */
+  align-items: flex-start;
+}
