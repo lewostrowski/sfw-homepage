@@ -118,7 +118,7 @@ const sunInfo = () => {
         let newDiv3 = document.createElement("div")
         newDiv3.setAttribute("class", "show-info")
         if (moment(data.sunrise) > moment()) {
-          if (moment().format("DD") % 2){
+          if (moment().format("DD") % 2 == 0){
             let showInfo = new ElementNew("showInfo", "Get up early, huh?")
             newDiv3.appendChild(showInfo.make())
           } else {
@@ -126,7 +126,7 @@ const sunInfo = () => {
             newDiv3.appendChild(showInfo.make())
           }
         } else if (moment(data.sunrise) < moment() && moment(data.sunset) > moment()) {
-          if (moment().format("DD") % 2){
+          if (moment().format("DD") % 2  == 0){
             let showInfo = new ElementNew("showInfo", "Today is workout day!")
             newDiv3.appendChild(showInfo.make())
           } else {
@@ -185,7 +185,7 @@ const sunInfo = () => {
   })
   req.open("GET", jsonLink)
   req.send()
-  console.log("Overall-status-LOG: JSON note controler. Action taken once at " + moment().format("HH:mm:ss"))
+  console.log("Overall-status-LOG: JSON note controler. Action taken once at " + moment().format("HH:mm:ss" / "DD/MM"))
 }
 
 sunInfo()

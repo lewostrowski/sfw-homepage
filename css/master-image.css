@@ -3,14 +3,16 @@
   padding: 0px; }
 
 html {
-  background-image: url("media/1545775691429.jpg"); }
+  background-image: url("media/1545775691429.jpg");
+  height: 100vh; }
 
 .page-container {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 9vh 50vh 36vh; }
+  grid-template-rows: auto auto auto; }
 
 .inner-container {
+  padding: 20px;
   grid-column: 2/3;
   grid-row: 2/3;
   display: grid;
@@ -47,6 +49,7 @@ html {
   margin: 10px; }
 
 .btn-container {
+  padding: 20px;
   grid-row: 3/4;
   grid-column: 2/3; }
 
@@ -54,5 +57,9 @@ html {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start; }
+
+footer {
+  position: fixed;
+  bottom: 0; }
 
 /*# sourceMappingURL=master-image.css.map */
