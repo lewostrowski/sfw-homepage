@@ -1,13 +1,15 @@
 $font-family: "VT323", "Courier New", "Arial", Sans-serif;
-$base-color: #647cff;
+$base-color:  #EAD13B;
+$trdu: 1s;
+
 %font-basic {
   font-family: $font-family;
   color: $base-color;
 }
 
 %box {
-  border: 1px dotted rgba(255,255,255,0.2);
-  background: rgba(255,255,255,0.2);
+  border: 1px dashed rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.3);
 }
 
 #version {
@@ -22,10 +24,10 @@ $base-color: #647cff;
   text-decoration: none;
   @extend %font-basic;
   background-color: rgba(0,0,0,0);
-  transition-duration: 0.5s;
+  transition-duration: $trdu;
   &:hover {
     border: solid 1px $base-color;
-    transition-duration: 0.5s;
+    transition-duration: $trdu;
   }
 }
 
@@ -132,7 +134,7 @@ $base-color: #647cff;
     font-size: x-large;
     width: 100%;
     background-color: rgba(0,0,0,0);
-    transition-duration: 0.5s;
+    transition-duration: $trdu;
     @extend %font-basic;
     text-align: center;
     border: {
@@ -143,7 +145,7 @@ $base-color: #647cff;
     }
     &:focus, &:hover {
       border-bottom: 1px solid $base-color;
-      transition-duration: 0.5s;
+      transition-duration: $trdu;
     }
   }
   #answer {
@@ -162,10 +164,10 @@ $base-color: #647cff;
     border: dashed 1px $base-color;
     text-decoration: none;
     @extend %font-basic;
-    transition-duration: 0.5s;
+    transition-duration: $trdu;
     &:hover {
       border: solid 1px $base-color;
-      transition-duration: 0.5s;
+      transition-duration: $trdu;
     }
   }
 }
