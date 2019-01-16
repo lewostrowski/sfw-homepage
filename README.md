@@ -8,5 +8,5 @@ current version: 1.12 -non-stable
 
 ### Known issue in non-stable version
 * difference in color between information border box and box background
-* chard to read color palette
+* hard to read color palette
 * wrong date format in oop.js, line 188
