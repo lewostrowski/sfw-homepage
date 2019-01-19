@@ -44,6 +44,13 @@ html {
   .time-stamp {
     grid-row: 1/2;
   }
+}
+
+.message-container {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-rows: 50px 50px;
   .show-info {
     grid-row:2/3;
   }

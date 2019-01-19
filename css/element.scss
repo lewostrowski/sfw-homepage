@@ -74,6 +74,18 @@ $trdu: 1s;
   }
 }
 
+.message-container {
+  .show-info {
+    display: flex;
+    justify-content: center;
+    p {
+      @extend %font-basic;
+      padding: 10px;
+      font-size: x-large;
+    }
+  }
+}
+
 .note-app {
   @extend %box;
   .note-display {

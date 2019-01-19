@@ -1,4 +1,4 @@
-#btn-style, .info-container .info p, .info-container .error-msg p, .clock-container .time-stamp p, .clock-container .show-info p, .note-app .note-display #note-time, .note-app .note-display #note-text, .note-app .note-display #remove-btn, .note-app .note-display #imp-btn, .note-app .note-taker #note-input, .note-app .note-taker #note-btn, .ask-container #ask-input, .ask-container #answer, .btn-link a {
+#btn-style, .info-container .info p, .info-container .error-msg p, .clock-container .time-stamp p, .clock-container .show-info p, .message-container .show-info p, .note-app .note-display #note-time, .note-app .note-display #note-text, .note-app .note-display #remove-btn, .note-app .note-display #imp-btn, .note-app .note-taker #note-input, .note-app .note-taker #note-btn, .ask-container #ask-input, .ask-container #answer, .btn-link a {
   font-family: "VT323", "Courier New", "Arial", Sans-serif;
   color: #EAD13B; }
 
@@ -43,6 +43,13 @@
   display: flex;
   justify-content: center; }
   .clock-container .show-info p {
+    padding: 10px;
+    font-size: x-large; }
+
+.message-container .show-info {
+  display: flex;
+  justify-content: center; }
+  .message-container .show-info p {
     padding: 10px;
     font-size: x-large; }
 

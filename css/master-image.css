@@ -37,7 +37,13 @@ html {
   grid-template-rows: 50px 50px; }
   .clock-container .time-stamp {
     grid-row: 1/2; }
-  .clock-container .show-info {
+
+.message-container {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-rows: 50px 50px; }
+  .message-container .show-info {
     grid-row: 2/3; }
 
 .ask-app {
