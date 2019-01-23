@@ -10,9 +10,9 @@ const born = (ms) => moment(ms).format("D/MM, HH:mm")
 const saveNote = (noteName) => {
   try {
     localStorage.setItem("notes", JSON.stringify(noteName))
-    console.log("notes-app-LOG: note saved")
+    console.log("(notes.js) note saved")
   } catch (e) {
-    console.log("notes-app-LOG: error occured in saveNote()")
+    console.log("(notes.js) error in saveNote()")
     console.log(e)
   }
 }
@@ -21,14 +21,14 @@ const removeNote = (id) => {
   try {
     const rmN = hold.findIndex((element) => element.id === id)
     if (rmN > -1) {
-      console.log(`backupLog: deleted item content: ${hold[rmN].text}`)
+      console.log(`(notes.js) deleted: "${hold[rmN].text}"`)
       hold.splice(rmN, 1)
-      console.log(`notes-app-LOG: item with index ${rmN} was deleted`)
+      console.log(`(notes.js) item with index ${rmN} deleted`)
       saveNote(hold)
       displayNote(hold)
     }
   } catch (e) {
-    console.log("notes-app-LOG: error occured in removeNote()")
+    console.log("(notes.js) error in removeNote()")
     console.log(e)
   }
 }
@@ -37,13 +37,13 @@ const getNote = () => {
   try {
     if (localStorage.getItem("notes") !== null) {
       hold = JSON.parse(localStorage.getItem("notes"))
-      console.log("notes-app-LOG: saved notes parsed and ready to load")
+      console.log(`(notes.js) notes parsed ${hold !== null}`)
     } else {
       hold = []
-      console.log("notes-app-LOG: no file with notes found")
+      console.log("(notes.js) nothing to parse yet")
     }
   } catch(e){
-    console.log("notes-app-LOG: error occured in getNote()")
+    console.log("(notes.js) error in getNote()")
     console.log(e)
   }
 }
@@ -55,15 +55,15 @@ const noteImp = (imp, id) => {
       hold[impN].imp = true
       saveNote(hold)
       displayNote(hold)
-      console.log(`notes-app-LOG: note ${impN} has been marked as important`)
+      console.log(`(notes.js) "${impN}" marked as important`)
     } else {
       hold[impN].imp = false
       saveNote(hold)
       displayNote(hold)
-      console.log(`notes-app-LOG: note ${impN} has been marked as standard`)
+      console.log(`(notes.js) "${impN}" marked as standard`)
     }
   } catch (e) {
-    console.log("notes-app-LOG: error occured in noteImp()")
+    console.log("(notes.js) error in noteImp()")
     console.log(e)
   }
 }
@@ -108,20 +108,20 @@ const displayNote = (noteName) => {
     containerDiv.appendChild(impBtn)
     if (noteElement.imp) {
       noteSpan.setAttribute("id", "note-text-imp")
-      console.log("notes-app-LOG: style changed to bold")
     } else {
       noteSpan.setAttribute("id", "note-text")
-      console.log("notes-app-LOG: style changed to standard")
     }
     document.querySelector(".note-display").appendChild(containerDiv)
   })
 }
 
+document.querySelector("#note-input").value = ""
+
 document.querySelector(".note-taker").addEventListener("submit", (e) => {
   e.preventDefault()
   let c = e.target.elements.content.value
   if (c.length < 1) {
-    console.log("notes-app-LOG: no character was writen into text area")
+    console.log("(notes.js) text area can't be empty")
   } else {
     hold.push({
       id: uuidv4(),
