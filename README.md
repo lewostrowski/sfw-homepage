@@ -3,7 +3,8 @@ safe for work homepage
 current version: 1.3 -non-stable
 
 ## Known issue in stable version
-* onscreen information about actual data display incorrectly after browser reopen (data is displayed correctly)
+* onscreen information about actual data display incorrectly after browser reopen
+* data display correctly only after refresh
 * lack of onscreen information about JSON (date + clock) and number of total dowload in day
   * in v1.3 that information was implemented in console
 
